@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>time table generator </title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="background"></div>
+
+    <div class="foreground">
+      <div class="container">
+  
+    <div class="left"> 
+  <img id="img" src="{% static 'lcwu-logo.png' %}" alt="LCWU Logo" width="100">
+  <div class="text-box">
+    <h2 class="line1">LAHORE COLLEGE For</h2>
+    <h2 class="line2">WOMEN UNIVERSITY</h2>
+  </div>
+</div>
+    <div class="right">
+    <h3 id="form-title">Login</h3>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert 
+      {% if message.tags == 'success' %}alert-success
+      {% elif message.tags == 'error' %}alert-danger
+      {% else %}alert-info{% endif %}" role="alert">
+      {{ message }}
+    </div>
+   {% endfor %}
+   {% endif %}
+<form action="" method="post">
+    {% csrf_token %}
+  <input type="text" name="username" id="username"  placeholder="Enter your Username" />
+  <input type="password" name="password" id="password" placeholder="Enter your Password" />
+
+  <button type="submit">Login</button>
+
+  <p id="toggle-text">Don't have an account? 
+    <a href="{% url 'register' %}" class="toggle-link" style="color:#c1974d; text-decoration: none;">SignUp</a>
+
+</p>
+
+  <span class="faculty-link">Login as Faculty ?</span>
+
+  </form>
+</div>
+
+  </div>
+    </div>
+  </div>
+</body>
+</html>
+</html>
