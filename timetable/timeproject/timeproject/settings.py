@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'timeproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lcwu_time_table',     # ✅ wrapped in quotes
-        'USER': 'root',                # or your actual DB username
-        'PASSWORD': '21f790d4TRY&',    # your MySQL password
+        'NAME': 'lcwu_time_table',     
+        'USER': 'root',                
+        'PASSWORD': '21f790d4TRY&',    
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
