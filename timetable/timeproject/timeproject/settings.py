@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'timeproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lcwu_time_table',     # ✅ wrapped in quotes
-        'USER': 'root',                # or your actual DB username
-        'PASSWORD': '21f790d4TRY&',    # your MySQL password
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': 'lcwu',     
+        'USER': 'root',                
+        'PASSWORD': 'winisawin',    
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -130,3 +130,4 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
